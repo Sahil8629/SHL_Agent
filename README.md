@@ -6,7 +6,7 @@ Stateless conversational agent over the SHL Individual Test Solutions catalog.
 
 ```bash
 pip install -r requirements.txt --break-system-packages
-export ANTHROPIC_API_KEY=sk-ant-...
+export GOOGLE_API_KEY =sk-ant-...
 cd app
 uvicorn main:app --reload --port 8000
 ```
