@@ -30,3 +30,11 @@ def chat(request: ChatRequest) -> ChatResponse:
     messages = [{"role": m.role, "content": m.content} for m in request.messages]
     result = _agent.handle_turn(messages)
     return ChatResponse(**result)
+
+@app.get("/")
+def root():
+    return {
+        "message": "SHL Assessment Recommendation API",
+        "docs": "/docs",
+        "health": "/health"
+    }
